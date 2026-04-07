@@ -216,7 +216,7 @@ plt.show()
 kmeans = KMeans(n_clusters=5, n_init=20, random_state=0)
 subset = df_cluster[cluster_columns]
 df_cluster["cluster"] = kmeans.fit_predict(subset)
-df_cluster
+
 
 # Plotting my clusters
 
@@ -245,3 +245,4 @@ plt.show()
 # --------------------------------------------------------------
 # Export dataset
 # --------------------------------------------------------------
+df_cluster.to_pickle("../../data/interim/03_data_features.pkl")
