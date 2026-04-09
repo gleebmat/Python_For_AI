@@ -1,9 +1,16 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from DataTransformation import LowPassFilter, PrincipalComponentAnalysis
-from TemporalAbstraction import NumericalAbstraction
-from FrequencyAbstraction import FourierTransformation
+from Python_for_AI.Machine_Learning.First_ML_Project.src.features.DataTransformation import (
+    LowPassFilter,
+    PrincipalComponentAnalysis,
+)
+from Python_for_AI.Machine_Learning.First_ML_Project.src.features.TemporalAbstraction import (
+    NumericalAbstraction,
+)
+from Python_for_AI.Machine_Learning.First_ML_Project.src.features.FrequencyAbstraction import (
+    FourierTransformation,
+)
 from sklearn.cluster import KMeans
 
 # --------------------------------------------------------------
