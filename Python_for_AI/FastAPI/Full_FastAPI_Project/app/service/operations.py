@@ -1,43 +1,46 @@
 from app.schemas import OperationRequest
 from app.repository import wallets as wallets_repository
 from fastapi import HTTPException
+from app.database import sessionLocal
+from sqlalchemy.orm import Session
 
 
-def add_income(operation: OperationRequest):
-    if not wallets_repository.is_wallet_exist(operation.wallet_name):
+def add_income(db: Session, operation: OperationRequest):
+
+    if not wallets_repository.is_wallet_exist(db, operation.wallet_name):
         raise HTTPException(
             status_code=404, detail=f"Wallet '{operation.wallet_name}' not found"
         )
-    new_balance = wallets_repository.add_income(operation.wallet_name, operation.amount)
+    wallet = wallets_repository.add_income(db, operation.wallet_name, operation.amount)
+    db.commit()
     return {
         "message": "Income successfully added",
         "wallet": operation.wallet_name,
         "amount": operation.amount,
         "description": operation.description,
-        "new_balance": new_balance,
+        "new_balance": wallet,
     }
 
 
-def add_expense(operation: OperationRequest):
-    if not wallets_repository.is_wallet_exist(operation.wallet_name):
+def add_expense(db: Session, operation: OperationRequest):
+
+    if not wallets_repository.is_wallet_exist(db, operation.wallet_name):
         raise HTTPException(
             status_code=404, detail=f"Wallet '{operation.wallet_name}' not found"
         )
-    balance = wallets_repository.get_wallet_balance_by_name(operation.wallet_name)
-    if balance < operation.amount:
+    wallet = wallets_repository.get_wallet_balance_by_name(db, operation.wallet_name)
+    if wallet.balance < operation.amount:
         raise HTTPException(
             status_code=400,
-            detail=f"Insufficient funds.\nAvailable: {balance}",
+            detail=f"Insufficient funds.\nAvailable: {wallet.balance}",
         )
 
-    new_balance = wallets_repository.add_expense(
-        operation.wallet_name, operation.amount
-    )
-
+    wallet = wallets_repository.add_expense(db, operation.wallet_name, operation.amount)
+    db.commit()
     return {
         "message": "Expense added",
         "wallet": operation.wallet_name,
         "amount": operation.amount,
         "description": operation.description,
-        "new_balance": new_balance,
+        "new_balance": wallet.balance,
     }
