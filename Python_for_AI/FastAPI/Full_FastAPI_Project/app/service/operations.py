@@ -1,7 +1,6 @@
 from app.schemas import OperationRequest
 from app.repository import wallets as wallets_repository
 from fastapi import HTTPException
-from app.database import sessionLocal
 from sqlalchemy.orm import Session
 
 
@@ -18,7 +17,7 @@ def add_income(db: Session, operation: OperationRequest):
         "wallet": operation.wallet_name,
         "amount": operation.amount,
         "description": operation.description,
-        "new_balance": wallet,
+        "new_balance": wallet.balance,
     }
 
 

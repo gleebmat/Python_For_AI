@@ -1,4 +1,3 @@
-from app.database import sessionLocal
 from app.models import Wallet
 from sqlalchemy.orm import Session
 from decimal import Decimal
@@ -24,7 +23,7 @@ def get_wallet_balance_by_name(db: Session, wallet_name: str) -> Wallet:
     return wallet
 
 
-def add_expense(db: Session, wallet_name: str, amount: Decimal) -> float:
+def add_expense(db: Session, wallet_name: str, amount: Decimal) -> Wallet:
 
     wallet = db.query(Wallet).filter(Wallet.name == wallet_name).first()
     wallet.balance -= amount
