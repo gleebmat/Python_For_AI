@@ -18,4 +18,4 @@ class Wallet(Base):
     name: Mapped[str]
     balance: Mapped[Decimal] = mapped_column(Numeric(precision=10, scale=2))
 
-    user_id: Mapped[int] = mapped_column(ForeignKey("user_id"), nullable=False)
+    user_id: Mapped[int] = mapped_column(ForeignKey("user.id"), nullable=False)
