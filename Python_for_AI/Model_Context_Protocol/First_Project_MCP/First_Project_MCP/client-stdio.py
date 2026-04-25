@@ -10,7 +10,7 @@ async def main():
     # Define server parameters
     server_params = StdioServerParameters(
         command="python",  # The command to run your server
-        args=["server.py"],  # Arguments to the command
+        args=["Simple_Server_Setup.py"],  # Arguments to the command
     )
 
     # Connect to the server
