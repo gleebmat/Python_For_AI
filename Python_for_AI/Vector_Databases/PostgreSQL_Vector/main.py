@@ -1,10 +1,9 @@
-import psycopg2
-import numpy as np
+from langchain_community.document_loaders import TextLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
+from langchain_postgres.vectorstores import PGVector
+import psycopg
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 texts = [
     "Type:Desktop,OS:Ubuntu,GPU:NVIDIA,CPU:AMD,RAM:64GB,SSD:2TB",
@@ -24,9 +23,9 @@ embeddings = OpenAIEmbeddings(
 embedding_list = []
 for text in texts:
     embedding_list.append(embeddings.embed_query(text))
+embedding_list
 
-
-conn = psycopg2.connect("dbname=vector_db user=postgres password=7007 port=5432")
+conn = psycopg.connect("dbname=postgres user=postgres password=7007 port=5433")
 cur = conn.cursor()
 for i in range(len(embedding_list)):
     embedding = embedding_list[i]
@@ -41,7 +40,7 @@ conn.close()
 
 new_text = "Type: Desktop,OS:Arch Linux,GPU:NVIDIA,CPU:AMD,RAM:64GB,SSD:2TB"
 new_embedding = embeddings.embed_query(new_text)
-conn = psycopg2.connect("dbname=vector_db user=postgres password=postgres port=5432")
+conn = psycopg.connect("dbname=postgres user=postgres password=7007 port=5433")
 cur = conn.cursor()
 cur.execute(
     "SELECT id,content FROM items ORDER BY embedding <-> %s::vector LIMIT 5",
