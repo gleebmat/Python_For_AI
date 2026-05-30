@@ -1,0 +1,601 @@
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-39' coro=<main() done, defined at <ipython-input-10-a034971c8657>:9> exception=NoEventLoopError('Not currently running on any asynchronous event loop. Available async backends: asyncio, trio')>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 169, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-10-a034971c8657>", line 14, in main
+    async with stdio_client(server_params) as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 124, in stdio_client
+    process = await _create_platform_compatible_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 249, in _create_platform_compatible_process
+    process = await create_windows_process(command, args, env, errlog, cwd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 184, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-43' coro=<main() done, defined at <ipython-input-11-a034971c8657>:9> exception=NoEventLoopError('Not currently running on any asynchronous event loop. Available async backends: asyncio, trio')>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 169, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-11-a034971c8657>", line 14, in main
+    async with stdio_client(server_params) as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 124, in stdio_client
+    process = await _create_platform_compatible_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 249, in _create_platform_compatible_process
+    process = await create_windows_process(command, args, env, errlog, cwd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 184, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-47' coro=<main() done, defined at <ipython-input-12-a034971c8657>:9> exception=NoEventLoopError('Not currently running on any asynchronous event loop. Available async backends: asyncio, trio')>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 169, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-12-a034971c8657>", line 14, in main
+    async with stdio_client(server_params) as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 124, in stdio_client
+    process = await _create_platform_compatible_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 249, in _create_platform_compatible_process
+    process = await create_windows_process(command, args, env, errlog, cwd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 184, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-51' coro=<main() done, defined at <ipython-input-13-a034971c8657>:9> exception=NoEventLoopError('Not currently running on any asynchronous event loop. Available async backends: asyncio, trio')>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 169, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-13-a034971c8657>", line 14, in main
+    async with stdio_client(server_params) as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 124, in stdio_client
+    process = await _create_platform_compatible_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 249, in _create_platform_compatible_process
+    process = await create_windows_process(command, args, env, errlog, cwd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 184, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-55' coro=<main() done, defined at <ipython-input-14-a034971c8657>:9> exception=NoEventLoopError('Not currently running on any asynchronous event loop. Available async backends: asyncio, trio')>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 169, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-14-a034971c8657>", line 14, in main
+    async with stdio_client(server_params) as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 124, in stdio_client
+    process = await _create_platform_compatible_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 249, in _create_platform_compatible_process
+    process = await create_windows_process(command, args, env, errlog, cwd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 184, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-59' coro=<main() done, defined at <ipython-input-15-a034971c8657>:9> exception=NoEventLoopError('Not currently running on any asynchronous event loop. Available async backends: asyncio, trio')>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 169, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-15-a034971c8657>", line 14, in main
+    async with stdio_client(server_params) as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 124, in stdio_client
+    process = await _create_platform_compatible_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 249, in _create_platform_compatible_process
+    process = await create_windows_process(command, args, env, errlog, cwd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 184, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-63' coro=<main() done, defined at <ipython-input-16-a034971c8657>:9> exception=NoEventLoopError('Not currently running on any asynchronous event loop. Available async backends: asyncio, trio')>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 169, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-16-a034971c8657>", line 14, in main
+    async with stdio_client(server_params) as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 124, in stdio_client
+    process = await _create_platform_compatible_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 249, in _create_platform_compatible_process
+    process = await create_windows_process(command, args, env, errlog, cwd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 184, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-67' coro=<main() done, defined at <ipython-input-17-a034971c8657>:9> exception=NoEventLoopError('Not currently running on any asynchronous event loop. Available async backends: asyncio, trio')>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 169, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-17-a034971c8657>", line 14, in main
+    async with stdio_client(server_params) as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 124, in stdio_client
+    process = await _create_platform_compatible_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 249, in _create_platform_compatible_process
+    process = await create_windows_process(command, args, env, errlog, cwd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 184, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-71' coro=<main() done, defined at <ipython-input-18-a034971c8657>:9> exception=NoEventLoopError('Not currently running on any asynchronous event loop. Available async backends: asyncio, trio')>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 169, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-18-a034971c8657>", line 14, in main
+    async with stdio_client(server_params) as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 124, in stdio_client
+    process = await _create_platform_compatible_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 249, in _create_platform_compatible_process
+    process = await create_windows_process(command, args, env, errlog, cwd)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\os\win32\utilities.py", line 184, in create_windows_process
+    process = await anyio.open_process(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_subprocesses.py", line 184, in open_process
+    return await get_async_backend().open_process(
+                 ~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 189, in get_async_backend
+    raise NoEventLoopError(
+    ...<2 lines>...
+    )
+anyio.NoEventLoopError: Not currently running on any asynchronous event loop. Available async backends: asyncio, trio
+DEBUG:mcp.server.lowlevel.server:Initializing server 'Calculator'
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListToolsRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for CallToolRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListResourcesRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ReadResourceRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for PromptListRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for GetPromptRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListResourceTemplatesRequest
+INFO:root:Running server with sse transport
+DEBUG:mcp.server.sse:SseServerTransport initialized with endpoint: /messages/
+DEBUG:mcp.server.lowlevel.server:Initializing server 'Calculator'
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListToolsRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for CallToolRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListResourcesRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ReadResourceRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for PromptListRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for GetPromptRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListResourceTemplatesRequest
+INFO:root:Running server with stdio transport
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-81' coro=<start_mcp() done, defined at <ipython-input-20-bb5b010a67d9>:21> exception=AttributeError("'OutStream' object has no attribute 'buffer'")>
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-20-bb5b010a67d9>", line 24, in start_mcp
+    await mcp.run_stdio_async()
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\server\fastmcp\server.py", line 755, in run_stdio_async
+    async with stdio_server() as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\server\stdio.py", line 49, in stdio_server
+    stdout = anyio.wrap_file(TextIOWrapper(sys.stdout.buffer, encoding="utf-8"))
+                                           ^^^^^^^^^^^^^^^^^
+AttributeError: 'OutStream' object has no attribute 'buffer'
+DEBUG:mcp.server.lowlevel.server:Initializing server 'Calculator'
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListToolsRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for CallToolRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListResourcesRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ReadResourceRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for PromptListRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for GetPromptRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListResourceTemplatesRequest
+INFO:root:Running server with stdio transport
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-85' coro=<start_mcp() done, defined at <ipython-input-21-bb5b010a67d9>:21> exception=ValueError('I/O operation on closed file')>
+Traceback (most recent call last):
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-21-bb5b010a67d9>", line 24, in start_mcp
+    await mcp.run_stdio_async()
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\server\fastmcp\server.py", line 755, in run_stdio_async
+    async with stdio_server() as (read_stream, write_stream):
+               ~~~~~~~~~~~~^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\server\stdio.py", line 47, in stdio_server
+    stdin = anyio.wrap_file(TextIOWrapper(sys.stdin.buffer, encoding="utf-8", errors="replace"))
+                            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file
+DEBUG:mcp.server.lowlevel.server:Initializing server 'Calculator'
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListToolsRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for CallToolRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListResourcesRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ReadResourceRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for PromptListRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for GetPromptRequest
+DEBUG:mcp.server.lowlevel.server:Registering handler for ListResourceTemplatesRequest
+INFO:root:Running server with sse transport
+DEBUG:mcp.server.sse:SseServerTransport initialized with endpoint: /messages/
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-89' coro=<start_mcp() done, defined at <ipython-input-22-915741bbecab>:21> exception=SystemExit(1)>
+Traceback (most recent call last):
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\uvicorn\server.py", line 172, in startup
+    server = await loop.create_server(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 1638, in create_server
+    raise OSError(err.errno, msg) from None
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8050): [winerror 10048] normalerweise darf jede socketadresse (protokoll, netzwerkadresse oder anschluss) nur jeweils einmal verwendet werden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+    ~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+    ~~~~~~~~~~~^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 373, in __wakeup
+    self.__step()
+    ~~~~~~~~~~~^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 278, in __step
+    self.__step_run_and_handle_result(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\glebs\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\asyncio\tasks.py", line 289, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "<ipython-input-22-915741bbecab>", line 27, in start_mcp
+    await mcp.run_sse_async()
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\mcp\server\fastmcp\server.py", line 775, in run_sse_async
+    await server.serve()
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\uvicorn\server.py", line 79, in serve
+    await self._serve(sockets)
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\uvicorn\server.py", line 94, in _serve
+    await self.startup(sockets=sockets)
+  File "d:\Python Projects\python-for-ai\Python_for_AI\Model_Context_Protocol\MCP_Start\.venv\Lib\site-packages\uvicorn\server.py", line 182, in startup
+    sys.exit(1)
+    ~~~~~~~~^^^
+SystemExit: 1
