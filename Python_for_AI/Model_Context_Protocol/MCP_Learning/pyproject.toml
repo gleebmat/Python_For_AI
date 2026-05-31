@@ -1,0 +1,18 @@
+[project]
+name = "mcp-learning"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13.2"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "mcp[cli]>=1.27.2",
+    "openai>=2.38.0",
+    "python-dotenv>=1.2.2",
+    "pywin32>=311",
+]
+
+[tool.uv.workspace]
+members = [
+    "running_with_docker",
+]
