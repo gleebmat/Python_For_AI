@@ -30,7 +30,7 @@ async def start_mcp(transport: str):
 
 
 if __name__ == "__main__":
-    TRANSPORT = "sse"
+    TRANSPORT = "stdio"
 
     try:
         asyncio.get_running_loop()

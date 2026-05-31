@@ -16,5 +16,5 @@ async def main():
             print(f"Result of add(2, 3): {result.content[0].text}")
 
 
-if __name__ == "__main__":
-    asyncio.run(main())
+nest_asyncio.apply()  # Required for some interactive environments
+await main()

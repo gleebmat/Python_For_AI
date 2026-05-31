@@ -2,7 +2,6 @@ import asyncio
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-# Required for some interactive environments
 import nest_asyncio
 
 
@@ -23,8 +22,9 @@ async def main():
 
 
 if __name__ == "__main__":
+    nest_asyncio.apply()
     try:
-        asyncio.get_running_loop()
-        asyncio.create_task(main())
+        loop = asyncio.get_running_loop()
+        loop.create_task(main())
     except RuntimeError:
         asyncio.run(main())
